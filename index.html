@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+<script>
+
+'use strict';
+let boxTop = 200;
+let boxLeft = 200;
+// document.addEventListener('keydown', (event) => {
+//   const keyName = event.key;
+//   const div = document.createElement('div')
+//   div.textContent = ('keydown event\n\n' + 'key: ' + keyName);
+
+//   document.body.appendChild(div);
+// });
+
+window.addEventListener("keydown", function (even) {
+
+  switch (event.key) {
+    case "ArrowDown":
+      boxTop += 10;
+      break;
+    case "ArrowUp":
+      boxTop -= 10;
+      break;
+    case "ArrowLeft":
+      boxLeft -= 10;
+      break;
+    case "ArrowRight":
+      boxLeft += 10;
+      break;
+  }
+
+  document.getElementById("box").style.top = boxTop + "px";
+  document.getElementById("box").style.left = boxLeft + "px";
+});
+
+
+</script>
+
+
+</head>
+<body>
+
+  <div id="box"></div>
+
+
+</body>
+</html>
+
